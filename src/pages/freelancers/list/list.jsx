@@ -70,7 +70,7 @@ const ListFreelancers = () => {
   return (
     <>
       <h2>Users</h2>
-      <Spin spinning={isLoading}>
+      <Spin spinning={isLoading || isLoadingDelete}>
         <Table dataSource={data} columns={columns} />
         <Button type="primary" icon={<UserAddOutlined />} onClick={() => history.push("/users/new")} >Add User</Button>
       </Spin>
