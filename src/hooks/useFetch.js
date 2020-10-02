@@ -68,7 +68,7 @@ const useFetch = (path, { id, params, immediate = true } = {}, fetch_options = {
       let finalPath = path;
       finalPath = finalPath.replace(":id", opts.id || id);
       if (url_params) finalPath = `${finalPath}?${new URLSearchParams(url_params)}`;
-      const url = `http://localhost:4000/api/${finalPath}`;
+      const url = `https://cdn-job.herokuapp.com/api/${finalPath}`;
       return fetchApi(url, { ...fetch_options, body: request_body }, updateState);
     },
     [fetch_options, id, params, path]
